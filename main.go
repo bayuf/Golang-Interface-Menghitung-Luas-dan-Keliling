@@ -5,6 +5,8 @@ import (
 	"reflect"
 )
 
+const PI = 3.14159
+
 type Shape interface {
 	Area() float64      // Menghitung Luas
 	Perimeter() float64 //Menghitung Keliling
@@ -49,14 +51,14 @@ func (triangle Triangle) Perimeter() float64 {
 
 // Circle
 type Circle struct {
-	PI, Radius float64
+	Radius float64
 }
 
 func (circle Circle) Area() float64 {
-	return circle.PI * (circle.Radius * circle.Radius)
+	return PI * (circle.Radius * circle.Radius)
 }
 func (circle Circle) Perimeter() float64 {
-	return 2 * circle.PI * circle.Radius
+	return 2 * PI * circle.Radius
 }
 
 // Trapesium
@@ -77,8 +79,8 @@ func main() {
 	shapes := []Shape{
 		Square{Side: 5},                 // Persegi
 		Rectangle{Length: 10, Width: 5}, // Persegi Panjang
-		Triangle{Base: 10, Height: 8, Side1: 10, Side2: 10, Side3: 10},   // Triangle
-		Circle{PI: 3.14159, Radius: 25},                                  //Lingkaran
+		Triangle{Base: 10, Height: 8, Side1: 10, Side2: 10, Side3: 10}, // Triangle
+		Circle{Radius: 25}, //Lingkaran
 		Trapezoid{Base1: 15, Base2: 10, Height: 8, Side1: 10, Side2: 10}, //Trapesium
 	}
 
