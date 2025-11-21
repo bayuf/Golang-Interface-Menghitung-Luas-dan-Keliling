@@ -92,7 +92,7 @@ func main() {
 
 func ProccessShape(sh Shape) {
 	name := reflect.TypeOf(sh).Name()
-	fmt.Printf("Bangun Datar : %s\n", name)
-	fmt.Printf("Luas : %.2f\n", sh.Area())
-	fmt.Printf("Keliling : %.2f\n\n", sh.Perimeter())
+	fmt.Printf("Bangun Datar\t: %s\n", name)
+	fmt.Printf("Luas\t\t: %.2f\n", sh.Area())
+	fmt.Printf("Keliling\t: %.2f\n\n", sh.Perimeter())
 }
